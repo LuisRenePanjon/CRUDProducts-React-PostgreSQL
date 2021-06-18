@@ -1,6 +1,6 @@
 const db = require("../config/database");
 
-// ==> Método responsável por criar um novo 'Product':
+// ==> Método para crear 'Product':
 
 exports.createProduct = async (req, res) => {
   const { product_name, quantity, price, image} = req.body;
@@ -17,6 +17,7 @@ exports.createProduct = async (req, res) => {
   });
 };
 
+// => Método Para listar Products
 exports.listAllProducts = async (req, res) => {
   const response = await db.query('SELECT * FROM products ORDER BY product_name ASC');
   res.status(200).send(response.rows);

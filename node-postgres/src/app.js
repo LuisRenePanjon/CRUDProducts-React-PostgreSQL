@@ -3,7 +3,7 @@ const cors = require('cors');
 
 const app = express();
 
-// ==> Rotas da API:
+// ==> Rutas da API:
 const index = require('./routes/index');
 const productRoute = require('./routes/product.routes');
 

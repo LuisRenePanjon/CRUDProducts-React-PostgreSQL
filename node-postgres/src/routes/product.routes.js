@@ -1,9 +1,7 @@
 const router = require('express-promise-router') (); 
 const productController = require ('../controllers/product.controller'); 
 
-// ==> Definindo as rotas do CRUD - 'Product': 
-
-// ==> Rota responsável por criar um novo 'Product': (POST): localhost: 3000 / api / products 
+// ==> Definiendo las rutas de CRUD - 'Product': 
 router.post('/products', productController.createProduct); 
 router.get('/products', productController.listAllProducts);
 
